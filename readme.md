@@ -10,12 +10,12 @@ https://www.figma.com/file/bkjVH5Z8Oqv50JxdbOdkLq/Moto-school
 
 ## Run development server
 
-```makefile
+```
 yarn run watch
 ```
 
 ## Run build production
 
-```makefile
+```
 yarn run prod
 ```

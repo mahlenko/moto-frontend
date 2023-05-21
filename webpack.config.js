@@ -9,7 +9,7 @@ module.exports = {
     },
 
     entry: {
-        'assets/main': ['./src/main.js', './src/main.css'],
+        'main': ['./src/main.js', './src/main.css'],
     },
 
     plugins: [
@@ -31,6 +31,14 @@ module.exports = {
             {
                 test: /\.css$/i,
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                type: 'asset/fonts',
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/images',
             },
         ],
     },

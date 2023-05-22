@@ -12,6 +12,13 @@ module.exports = {
         'main': ['./src/main.js', './src/main.css'],
     },
 
+    output: {
+        assetModuleFilename: pathData => {
+            const filepath = path.dirname(pathData.filename).split('/').slice(1).join('/');
+            return `${filepath}/[name][ext]`;
+        },
+    },
+
     plugins: [
         new MiniCssExtractPlugin(),
 
@@ -34,11 +41,15 @@ module.exports = {
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
-                type: 'asset/fonts',
+                type: 'asset/resource',
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                type: 'asset/images',
+                type: 'asset/resource',
+            },
+            {
+                test: /\.(mp4)$/i,
+                type: 'asset/resource',
             },
         ],
     },

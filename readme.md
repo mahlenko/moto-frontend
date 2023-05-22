@@ -11,7 +11,7 @@ https://www.figma.com/file/bkjVH5Z8Oqv50JxdbOdkLq/Moto-school
 ## Run development server
 
 ```
-yarn run watch
+yarn run serve
 ```
 
 ## Run build production

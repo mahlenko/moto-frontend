@@ -1,0 +1,21 @@
+.navigation-logotype svg {
+    @apply max-sm:h-10 h-16 w-auto
+}
+
+a[data-id="navigation-toggle"] {
+    width: 3rem;
+    height: 3rem;
+}
+
+a[data-id="navigation-toggle"] svg {
+    height: 2rem;
+    width: 2rem;
+}
+
+[data-id="navigation-items"] li {
+    @apply list-none
+}
+
+[data-id="navigation-items"] li.item a {
+    @apply block max-sm:py-4 max-sm:border-b max-sm:border-trueGray-700
+}

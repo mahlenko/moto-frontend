@@ -1,0 +1,15 @@
+.stick {
+    @apply fixed bottom-4 w-full max-sm:px-4 max-sm:py-2 px-16;
+}
+
+.stick .content {
+    @apply
+        flex justify-between items-center sm:backdrop-blur-md
+        sm:shadow-xl box-border max-w-full sm:p-4 rounded-2xl text-default-inverse;
+}
+
+@media screen and (min-width: 640px) {
+    .stick .content {
+        background-color: #212121D9;
+    }
+}

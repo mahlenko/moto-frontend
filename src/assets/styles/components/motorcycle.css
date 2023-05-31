@@ -1,0 +1,13 @@
+.motorcycles {
+    @apply flex max-sm:flex-col flex-wrap gap-8 justify-between;
+}
+
+.motorcycles > .item {
+    @apply flex flex-col gap-y-2;
+}
+
+@media screen and (min-width: 640px) {
+    .motorcycles .item {
+        width: 45%;
+    }
+}

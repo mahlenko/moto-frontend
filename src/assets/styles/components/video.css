@@ -1,0 +1,22 @@
+.video {
+    @apply relative
+}
+
+.video.background {
+    @apply absolute bg-default pointer-events-none w-full h-full overflow-hidden;
+    min-height: inherit !important;
+    z-index: -10;
+}
+
+.video.background video {
+    @apply object-cover max-sm:min-h-full sm:w-full
+}
+
+/*  */
+.video-player {
+    @apply aspect-video rounded-2xl sm:w-1/2
+}
+
+.video-player iframe {
+    @apply rounded-2xl
+}

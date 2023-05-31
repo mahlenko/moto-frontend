@@ -1,0 +1,9 @@
+.modal {
+    @apply fixed top-0 left-0 w-full h-full p-4 sm:p-8 overflow-y-scroll backdrop-blur-md z-10;
+    background-color: #212121D9;
+}
+
+.modal-container {
+    @apply border rounded-2xl bg-default text-default-inverse shadow-2xl m-auto px-8 py-5;
+    border-color: #343434;
+}

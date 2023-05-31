@@ -1,0 +1,15 @@
+.iconRow {
+    @apply flex justify-between gap-x-2 sm:gap-x-8;
+}
+
+.iconRow .item {
+    @apply flex flex-col gap-y-4 items-center list-none sm:px-2 text-center flex-1;
+}
+
+.iconRow .item .icon {
+    @apply block h-12 w-auto;
+}
+
+.iconRow .item .icon * {
+    @apply h-full w-full;
+}

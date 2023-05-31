@@ -1,0 +1,65 @@
+.more-courses {
+    @apply bg-default-inverse flex flex-col gap-y-10
+}
+
+.courses {
+    @apply flex gap-x-4
+}
+
+.courses .item {
+    @apply bg-white flex flex-col justify-between p-8 rounded-xl relative transition-shadow duration-500 ease-out sm:hover:shadow-xl
+}
+
+.courses .item .label {
+    @apply bg-primary px-2 pb-0.5 rounded-b-xl absolute top-0 right-8 small
+}
+
+.courses .item .header .title {
+    @apply font-bold
+}
+
+.courses .item .header .description {
+    @apply text-secondary font-body leading-6;
+}
+
+.courses .item .datasets {
+    @apply mb-8
+}
+
+.courses .item .datalist {
+    @apply flex flex-col gap-y-2
+}
+
+.courses .item .datalist:not(:last-child) {
+    @apply my-4
+}
+
+.courses .item .datalist .title {
+    @apply font-bold
+}
+
+.courses .item .datalist ul {
+    @apply ml-8
+}
+
+.courses .item .price {
+    @apply h3 block mb-4
+}
+
+.courses .item .button {
+    @apply w-full
+}
+
+/* Swipe */
+.courses.swipe-container {
+    @apply max-sm:w-full max-sm:overflow-x-scroll max-sm:px-4 max-sm:pb-10;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 640px) {
+    .courses.swipe-container .item {
+        min-width: 80vw;
+        box-shadow: 0 0 2px rgba(0,0,0,.1);
+    }
+}
+

@@ -44,12 +44,12 @@ module.exports = {
                 type: 'asset/resource',
             },
             {
-                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                test: /\.(mp4)$/i,
                 type: 'asset/resource',
             },
             {
-                test: /\.(mp4)$/i,
-                type: 'asset/resource',
+                test: /\.html$/i,
+                loader: "html-loader",
             },
         ],
     },

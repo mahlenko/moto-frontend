@@ -1,0 +1,12 @@
+
+.button {
+    @apply inline-block bg-default text-default-inverse text-center whitespace-nowrap px-8 py-3 rounded-md select-none hover:!no-underline transition active:scale-[.95]
+}
+
+.button.primary {
+    @apply bg-primary text-default
+}
+
+.store-button svg {
+    @apply h-12
+}

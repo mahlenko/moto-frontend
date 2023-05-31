@@ -1,0 +1,51 @@
+.tariff-slider {
+    @apply flex gap-x-4 overflow-x-hidden p-0;
+}
+
+.tariff-slider > .item {
+    @apply bg-cover bg-no-repeat flex flex-col justify-center min-w-full w-screen max-sm:px-4 max-sm:py-8 p-16 box-border text-default-inverse;
+}
+
+.tariff-slider > .item .content {
+    @apply flex flex-col gap-y-4 sm:w-3/5;
+}
+
+.tariff-slider > .item .content .description {
+    @apply h4
+}
+
+.tariff-slider > .item .content ul {
+    @apply ml-8;
+}
+
+.tariff-slider > .item .content ul.price-list {
+    @apply flex gap-x-8 list-none ml-0;
+}
+
+.tariff-slider > .item .content ul.price-list .item .price-text {
+    @apply text-3xl font-bold;
+}
+
+.tariff-slider .item.online {
+    background-image: url("./assets/image/slide/online.webp");
+    background-position-x: -15vw;
+}
+
+.tariff-slider .item.online .content {
+    @apply ml-auto;
+}
+
+.tariff-slider .item.offline {
+    background-position-x: right -5vw;
+    background-image: url("./assets/image/slide/offline.webp");
+}
+
+@media screen and (max-width: 640px) {
+    .tariff-slider .item.online {
+        background-position-x: left -115vw;
+    }
+
+    .tariff-slider .item.offline {
+        background-position-x: right -230vw;
+    }
+}

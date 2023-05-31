@@ -1,0 +1,15 @@
+.instructors {
+    @apply flex flex-col gap-y-8 justify-between;
+}
+
+.instructors .item {
+    @apply flex flex-col gap-y-6 p-4 flex-1;
+}
+
+.instructors .item .content {
+    @apply flex flex-col gap-y-4;
+}
+
+.instructors .item .avatar {
+    @apply h-20 sm:h-36
+}

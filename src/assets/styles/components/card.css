@@ -1,0 +1,24 @@
+.cards-section {
+    @apply flex flex-col sm:flex-row gap-x-4 gap-y-8
+}
+
+.cards-section .item {
+    @apply flex flex-1 flex-wrap flex-col gap-y-4 p-4
+}
+
+.cards-section .item .header {
+    @apply flex gap-x-4 items-center
+}
+
+.cards-section .item .header .icon {
+    @apply h-12 flex-shrink-0
+}
+
+.cards-section .item .header .icon svg {
+    @apply h-full
+}
+
+.cards-section .item .header .title {
+    @apply font-bold large;
+    line-height: 120%;
+}

@@ -1,0 +1,80 @@
+.control, .control-select {
+    @apply flex flex-col gap-y-4 relative pt-6 flex-grow;
+}
+
+.control label,
+.control-select label
+{
+    @apply absolute transition transform-cpu
+    sm:pointer-events-none translate-y-3 translate-x-3
+    max-sm:-translate-y-7 max-sm:translate-x-0;
+    color: #7D838B;
+}
+
+.control input, .control textarea, .control-select select {
+    @apply bg-default p-2.5 border rounded-md text-default-inverse placeholder-neutral-600;
+    background-color: #D8DBE00D;
+    border-color: #7D838B4D;
+}
+
+.control input:not(:focus),
+.control textarea:not(:focus) {
+    @apply sm:placeholder-transparent;
+}
+
+.control input[required] ~ label:after {
+    content: " *";
+}
+
+.control input:focus,
+.control textarea:focus,
+.control-select select:focus {
+    @apply outline outline-0 border-secondary;
+}
+
+.control input:focus,
+.control textarea:focus,
+.control input[data-filled="true"],
+.control textarea[data-filled="true"] {
+    @apply bg-default;
+}
+
+.control input:focus ~ label,
+.control textarea:focus ~ label,
+.control input[data-filled="true"] ~ label,
+.control textarea[data-filled="true"] ~ label {
+    @apply -translate-y-7 translate-x-0;
+}
+
+/* Select */
+.control-select {
+
+}
+
+.control-select select {
+    @apply appearance-none sm:pt-10 pr-10;
+}
+
+/* Checkbox */
+
+.control-checkbox {
+    @apply flex gap-x-2 items-start;
+}
+
+.control-checkbox label {
+    @apply -mt-1;
+}
+
+.control-checkbox input[type="checkbox"] {
+    @apply relative flex-shrink-0 w-5 h-5 appearance-none;
+}
+
+.control-checkbox input[type="checkbox"]:before {
+    @apply absolute block border rounded w-full h-full;
+    content: "";
+}
+
+.control-checkbox input[type="checkbox"]:checked:before {
+    @apply bg-brand border-brand bg-center bg-no-repeat;
+    background-image: url("./assets/image/controls/checked.svg");
+}

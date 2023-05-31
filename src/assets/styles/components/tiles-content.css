@@ -1,0 +1,133 @@
+.tiles-content {
+    @apply flex gap-x-4 items-start my-10 max-sm:px-4;
+}
+
+.tiles-content .item {
+    @apply flex flex-col list-none sm:w-1/5 gap-y-12 pt-10;
+}
+
+.tiles-content .item:nth-child(even) {
+    @apply mt-32;
+}
+
+.tiles-content .item .tile {
+    @apply cursor-default relative h2 text-secondary ml-10 transition-transform ease-out duration-500;
+}
+
+.tiles-content .item:hover .tile {
+    @apply -translate-y-2;
+}
+
+.tiles-content .item .tile::before {
+    @apply absolute inline-block bg-default-inverse rounded-2xl px-8 py-5 border-secondary top-0 w-24 h-20 -z-10;
+    content: " ";
+    box-shadow:
+        inset -2.5px -2px 0 .01rem rgb(125, 131, 139),
+        .5rem .5rem 2rem rgba(150, 150, 150, .25);
+    transform: rotate(40deg) skewY(-10deg) translateX(-1.5rem);
+}
+
+.tiles-content .item:hover .tile::before {
+    box-shadow:
+        inset -2.5px -2px 0 .01rem rgba(134, 187, 64, 1),
+        1rem 1rem 2rem rgba(134, 187, 64, .25);
+}
+
+@media screen and (max-width: 640px) {
+    .tiles-content .item .tile::before {
+        transform: rotate(40deg) skewY(-10deg) translateX(-2rem);
+    }
+}
+
+.tiles-content .item:nth-child(1):after {
+    background: rgb(216,219,224);
+    background: linear-gradient(90deg, rgba(216,219,224,1) 0%, rgba(255,202,0,1) 100%);
+}
+
+/* Тень/обводка */
+.tiles-content .item:nth-child(1) .tile::before {
+    box-shadow:
+        inset -2.5px -2px 0 .01rem rgba(216,219,224,1),
+        .5rem .5rem 2rem rgba(150, 150, 150, .25);
+}
+
+.tiles-content .item:nth-child(2) .tile::before {
+    box-shadow:
+            inset -2.5px -2px 0 .01rem rgba(236,210,108,1),
+            .5rem .5rem 2rem rgba(150, 150, 150, .25);
+}
+
+.tiles-content .item:nth-child(3) .tile::before {
+    box-shadow:
+            inset -2.5px -2px 0 .01rem rgba(255,202,0,1),
+            .5rem .5rem 2rem rgba(150, 150, 150, .25);
+}
+
+.tiles-content .item:nth-child(4) .tile::before {
+    box-shadow:
+            inset -2.5px -2px 0 .01rem rgba(134,187,64,1),
+            .5rem .5rem 2rem rgba(150, 150, 150, .25);
+}
+
+.tiles-content .item:nth-child(5) .tile::before {
+    box-shadow:
+            inset -2.5px -2px 0 .01rem rgba(58,102,56,1),
+            .5rem .5rem 2rem rgba(150, 150, 150, .25);
+}
+
+/* Соединяющие линии */
+.tiles-content .item:nth-child(2):after {
+    background: rgb(255,202,0,1);
+    background: linear-gradient(90deg, rgba(255,202,0,1) 0%, rgba(255,202,0,1) 100%);
+}
+
+.tiles-content .item:nth-child(3):after {
+    background: rgb(255,202,0,1);
+    background: linear-gradient(90deg, rgba(255,202,0,1) 0%, rgba(134,187,64,1) 100%);
+}
+
+.tiles-content .item:nth-child(4):after {
+    background: rgb(58,102,56,1);
+    background: linear-gradient(90deg, rgba(134,187,64,1) 0%, rgba(58,102,56,1) 100%);
+}
+
+.tiles-content .item:not(:last-child):after {
+    @apply block h-4 w-1/5 bg-secondary-inverse absolute -z-20;
+    content: " ";
+}
+
+/* Нечетные линии */
+.tiles-content .item:after:nth-child(odd) {
+    @apply rotate-[26deg] mt-20 ml-16 skew-x-12 translate-x-1.5 translate-y-2;
+}
+
+/* Четные линии */
+.tiles-content .item:after:nth-child(even) {
+    @apply rotate-[-26deg] -mt-12 ml-16 -skew-x-12 translate-x-1 translate-y-2;
+}
+
+/* Контент */
+.tiles-content .item .content {
+    @apply flex flex-col gap-y-2
+}
+
+.tiles-content .item .title {
+    @apply font-bold
+}
+
+.tiles-content .item .description {}
+
+/* Mobile swiper */
+.swipe-container-tiles {
+    @apply max-sm:overflow-x-scroll relative
+}
+
+@media screen and (max-width: 640px) {
+    .tiles-content .item {
+        min-width: 60vw;
+    }
+
+    .tiles-content .item:after {
+        min-width: 60vw;
+    }
+}
